@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+data/
+.DS_Store
+*.pt
+*.pth
+*.ckpt
+.env
+neural_genesis.log
+nohup.out

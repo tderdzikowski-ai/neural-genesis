@@ -1,0 +1,489 @@
+{
+  "candidate": "SoftplusErf",
+  "expression": "softplus(x) * erf(alpha * x)",
+  "device": "mps",
+  "timestamp": "2026-03-26 19:40:57",
+  "tests": {
+    "cifar100_smallcnn": {
+      "SoftplusErf": {
+        "accs": [
+          62.0,
+          61.52,
+          61.81
+        ],
+        "mean": 61.78,
+        "std": 0.2,
+        "convergence": {
+          "5": 41.87,
+          "10": 49.53,
+          "20": 57.0,
+          "50": 61.78
+        },
+        "grad_stats": {
+          "mean": 0.045598,
+          "std": 0.10115,
+          "vanish_ratio": 0.16,
+          "explode_ratio": 0.0
+        },
+        "crashed": false
+      },
+      "ShiftGate": {
+        "accs": [
+          58.46,
+          58.46,
+          58.49
+        ],
+        "mean": 58.47,
+        "std": 0.01,
+        "convergence": {
+          "5": 46.24,
+          "10": 51.96,
+          "20": 55.84,
+          "50": 58.47
+        },
+        "grad_stats": {
+          "mean": 0.019232,
+          "std": 0.02089,
+          "vanish_ratio": 0.16,
+          "explode_ratio": 0.0
+        },
+        "crashed": false
+      },
+      "ReLU": {
+        "accs": [
+          54.85,
+          55.13,
+          55.31
+        ],
+        "mean": 55.1,
+        "std": 0.19,
+        "convergence": {
+          "5": 35.97,
+          "10": 42.27,
+          "20": 48.41,
+          "50": 55.1
+        },
+        "grad_stats": {
+          "mean": 0.023379,
+          "std": 0.02824,
+          "vanish_ratio": 0.2,
+          "explode_ratio": 0.0
+        },
+        "crashed": false
+      },
+      "GELU": {
+        "accs": [
+          60.58,
+          60.51,
+          60.96
+        ],
+        "mean": 60.68,
+        "std": 0.2,
+        "convergence": {
+          "5": 41.33,
+          "10": 48.85,
+          "20": 55.66,
+          "50": 60.68
+        },
+        "grad_stats": {
+          "mean": 0.019587,
+          "std": 0.024848,
+          "vanish_ratio": 0.2,
+          "explode_ratio": 0.0
+        },
+        "crashed": false
+      },
+      "Mish": {
+        "accs": [
+          60.02,
+          59.66,
+          59.57
+        ],
+        "mean": 59.75,
+        "std": 0.19,
+        "convergence": {
+          "5": 43.68,
+          "10": 50.3,
+          "20": 55.41,
+          "50": 59.75
+        },
+        "grad_stats": {
+          "mean": 0.019906,
+          "std": 0.025665,
+          "vanish_ratio": 0.2,
+          "explode_ratio": 0.0
+        },
+        "crashed": false
+      }
+    },
+    "resnet18_cifar10": {
+      "SoftplusErf": {
+        "accs": [
+          91.51,
+          91.48,
+          91.31
+        ],
+        "mean": 91.43,
+        "std": 0.09,
+        "convergence": {
+          "5": 80.02,
+          "10": 85.98,
+          "20": 89.47,
+          "50": 91.43
+        },
+        "grad_stats": {
+          "mean": 0.005243,
+          "std": 0.009512,
+          "vanish_ratio": 0.025316,
+          "explode_ratio": 0.0
+        },
+        "crashed": false
+      },
+      "ShiftGate": {
+        "accs": [
+          91.28,
+          91.25,
+          91.28
+        ],
+        "mean": 91.27,
+        "std": 0.01,
+        "convergence": {
+          "5": 78.99,
+          "10": 85.23,
+          "20": 88.87,
+          "50": 91.27
+        },
+        "grad_stats": {
+          "mean": 0.00317,
+          "std": 0.004306,
+          "vanish_ratio": 0.004219,
+          "explode_ratio": 0.0
+        },
+        "crashed": false
+      },
+      "ReLU": {
+        "accs": [
+          91.07,
+          90.96,
+          90.54
+        ],
+        "mean": 90.86,
+        "std": 0.23,
+        "convergence": {
+          "5": 77.63,
+          "10": 84.58,
+          "20": 88.34,
+          "50": 90.86
+        },
+        "grad_stats": {
+          "mean": 0.003208,
+          "std": 0.003088,
+          "vanish_ratio": 0.032258,
+          "explode_ratio": 0.0
+        },
+        "crashed": false
+      },
+      "GELU": {
+        "accs": [
+          90.98,
+          91.04,
+          90.97
+        ],
+        "mean": 91.0,
+        "std": 0.03,
+        "convergence": {
+          "5": 78.06,
+          "10": 85.47,
+          "20": 88.79,
+          "50": 91.0
+        },
+        "grad_stats": {
+          "mean": 0.002877,
+          "std": 0.002924,
+          "vanish_ratio": 0.026882,
+          "explode_ratio": 0.0
+        },
+        "crashed": false
+      },
+      "Mish": {
+        "accs": [
+          90.91,
+          90.83,
+          91.0
+        ],
+        "mean": 90.91,
+        "std": 0.07,
+        "convergence": {
+          "5": 76.94,
+          "10": 84.77,
+          "20": 88.61,
+          "50": 90.91
+        },
+        "grad_stats": {
+          "mean": 0.002321,
+          "std": 0.00236,
+          "vanish_ratio": 0.0,
+          "explode_ratio": 0.0
+        },
+        "crashed": false
+      }
+    },
+    "smallcnn_cifar10_10seeds": {
+      "SoftplusErf": {
+        "accs": [
+          88.05,
+          87.87,
+          88.58,
+          88.33,
+          87.93,
+          88.07,
+          88.11,
+          88.13,
+          87.95,
+          87.93
+        ],
+        "mean": 88.09,
+        "std": 0.21,
+        "crashed": false
+      },
+      "ShiftGate": {
+        "accs": [
+          85.87,
+          85.86,
+          85.99,
+          85.21,
+          85.34,
+          85.55,
+          85.84,
+          85.57,
+          85.35,
+          85.99
+        ],
+        "mean": 85.66,
+        "std": 0.27,
+        "crashed": false
+      },
+      "ReLU": {
+        "accs": [
+          85.95,
+          85.25,
+          85.84,
+          85.07,
+          85.7,
+          84.92,
+          85.19,
+          85.51,
+          85.16,
+          85.63
+        ],
+        "mean": 85.42,
+        "std": 0.33,
+        "crashed": false
+      },
+      "GELU": {
+        "accs": [
+          87.21,
+          87.48,
+          87.54,
+          87.59,
+          86.8,
+          87.28,
+          87.6,
+          87.45,
+          87.26,
+          87.15
+        ],
+        "mean": 87.34,
+        "std": 0.24,
+        "crashed": false
+      },
+      "Mish": {
+        "accs": [
+          87.19,
+          87.16,
+          87.43,
+          87.28,
+          87.39,
+          87.36,
+          87.37,
+          87.24,
+          87.34,
+          86.69
+        ],
+        "mean": 87.25,
+        "std": 0.2,
+        "crashed": false
+      }
+    },
+    "gradient_analysis": {
+      "SoftplusErf": {
+        "output_mean": 1.2263,
+        "output_std": 1.6736,
+        "output_range": [
+          -0.2755,
+          5.0067
+        ],
+        "grad_mean": 0.5013,
+        "grad_std": 0.5204,
+        "grad_range": [
+          -0.1535,
+          1.2155
+        ],
+        "grad_near_zero_pct": 0.0,
+        "grad2_mean": 0.0999,
+        "grad2_std": 0.3477,
+        "positive_region_pct": 50.0,
+        "negative_region_pct": 50.0
+      },
+      "ShiftGate": {
+        "output_mean": -1.0493,
+        "output_std": 1.7402,
+        "output_range": [
+          -4.9876,
+          0.5671
+        ],
+        "grad_mean": 0.5077,
+        "grad_std": 0.5271,
+        "grad_range": [
+          -0.199,
+          1.0436
+        ],
+        "grad_near_zero_pct": 0.1,
+        "grad2_mean": -0.1079,
+        "grad2_std": 0.1892,
+        "positive_region_pct": 50.0,
+        "negative_region_pct": 50.0
+      },
+      "ReLU": {
+        "output_mean": 1.2513,
+        "output_std": 1.6162,
+        "output_range": [
+          0.0,
+          5.0
+        ],
+        "grad_mean": 0.5,
+        "grad_std": 0.5003,
+        "grad_range": [
+          0.0,
+          1.0
+        ],
+        "grad_near_zero_pct": 50.0,
+        "grad2_mean": 0.0,
+        "grad2_std": 0.0,
+        "positive_region_pct": 50.0,
+        "negative_region_pct": 0.0
+      },
+      "GELU": {
+        "output_mean": 1.2013,
+        "output_std": 1.6394,
+        "output_range": [
+          -0.17,
+          5.0
+        ],
+        "grad_mean": 0.5,
+        "grad_std": 0.5142,
+        "grad_range": [
+          -0.1289,
+          1.1289
+        ],
+        "grad_near_zero_pct": 11.9,
+        "grad2_mean": 0.0999,
+        "grad2_std": 0.26,
+        "positive_region_pct": 50.0,
+        "negative_region_pct": 50.0
+      },
+      "Mish": {
+        "output_mean": 1.143,
+        "output_std": 1.6829,
+        "output_range": [
+          -0.3088,
+          4.9996
+        ],
+        "grad_mean": 0.5033,
+        "grad_std": 0.5151,
+        "grad_range": [
+          -0.1125,
+          1.0885
+        ],
+        "grad_near_zero_pct": 0.0,
+        "grad2_mean": 0.1026,
+        "grad2_std": 0.2157,
+        "positive_region_pct": 50.0,
+        "negative_region_pct": 50.0
+      }
+    },
+    "convergence_summary": {
+      "cifar100_smallcnn": {
+        "SoftplusErf": {
+          "5": 41.87,
+          "10": 49.53,
+          "20": 57.0,
+          "50": 61.78
+        },
+        "ShiftGate": {
+          "5": 46.24,
+          "10": 51.96,
+          "20": 55.84,
+          "50": 58.47
+        },
+        "ReLU": {
+          "5": 35.97,
+          "10": 42.27,
+          "20": 48.41,
+          "50": 55.1
+        },
+        "GELU": {
+          "5": 41.33,
+          "10": 48.85,
+          "20": 55.66,
+          "50": 60.68
+        },
+        "Mish": {
+          "5": 43.68,
+          "10": 50.3,
+          "20": 55.41,
+          "50": 59.75
+        }
+      },
+      "resnet18_cifar10": {
+        "SoftplusErf": {
+          "5": 80.02,
+          "10": 85.98,
+          "20": 89.47,
+          "50": 91.43
+        },
+        "ShiftGate": {
+          "5": 78.99,
+          "10": 85.23,
+          "20": 88.87,
+          "50": 91.27
+        },
+        "ReLU": {
+          "5": 77.63,
+          "10": 84.58,
+          "20": 88.34,
+          "50": 90.86
+        },
+        "GELU": {
+          "5": 78.06,
+          "10": 85.47,
+          "20": 88.79,
+          "50": 91.0
+        },
+        "Mish": {
+          "5": 76.94,
+          "10": 84.77,
+          "20": 88.61,
+          "50": 90.91
+        }
+      }
+    }
+  },
+  "forward_time_ms": {
+    "SoftplusErf": 0.1061,
+    "ShiftGate": 0.0765,
+    "ReLU": 0.021,
+    "GELU": 0.0212,
+    "Mish": 0.0227
+  }
+}

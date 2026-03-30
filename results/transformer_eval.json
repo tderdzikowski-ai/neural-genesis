@@ -1,0 +1,122 @@
+{
+  "ShiftGate": {
+    "name": "ShiftGate",
+    "accs": [
+      82.87,
+      82.76,
+      82.56
+    ],
+    "per_seed": {
+      "42": {
+        "acc": 82.87,
+        "crashed": false
+      },
+      "123": {
+        "acc": 82.76,
+        "crashed": false
+      },
+      "456": {
+        "acc": 82.56,
+        "crashed": false
+      }
+    },
+    "mean": 82.73,
+    "std": 0.12832251036613543
+  },
+  "GELU": {
+    "name": "GELU",
+    "accs": [
+      84.04,
+      84.85,
+      84.6
+    ],
+    "per_seed": {
+      "42": {
+        "acc": 84.04,
+        "crashed": false
+      },
+      "123": {
+        "acc": 84.85,
+        "crashed": false
+      },
+      "456": {
+        "acc": 84.6,
+        "crashed": false
+      }
+    },
+    "mean": 84.49666666666666,
+    "std": 0.33865748019036174
+  },
+  "Mish": {
+    "name": "Mish",
+    "accs": [
+      83.79,
+      83.88,
+      84.12
+    ],
+    "per_seed": {
+      "42": {
+        "acc": 83.79,
+        "crashed": false
+      },
+      "123": {
+        "acc": 83.88,
+        "crashed": false
+      },
+      "456": {
+        "acc": 84.12,
+        "crashed": false
+      }
+    },
+    "mean": 83.93,
+    "std": 0.1392838827718417
+  },
+  "ReLU": {
+    "name": "ReLU",
+    "accs": [
+      83.2,
+      84.19,
+      84.15
+    ],
+    "per_seed": {
+      "42": {
+        "acc": 83.2,
+        "crashed": false
+      },
+      "123": {
+        "acc": 84.19,
+        "crashed": false
+      },
+      "456": {
+        "acc": 84.15,
+        "crashed": false
+      }
+    },
+    "mean": 83.84666666666666,
+    "std": 0.45755388268001285
+  },
+  "SwiGLU": {
+    "name": "SwiGLU",
+    "accs": [
+      85.39,
+      85.84,
+      85.4
+    ],
+    "per_seed": {
+      "42": {
+        "acc": 85.39,
+        "crashed": false
+      },
+      "123": {
+        "acc": 85.84,
+        "crashed": false
+      },
+      "456": {
+        "acc": 85.4,
+        "crashed": false
+      }
+    },
+    "mean": 85.54333333333334,
+    "std": 0.20981473309141638
+  }
+}

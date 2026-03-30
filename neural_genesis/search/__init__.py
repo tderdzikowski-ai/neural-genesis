@@ -1,0 +1,1 @@
+from search.random_search import run_random_search

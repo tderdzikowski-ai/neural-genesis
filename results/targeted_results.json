@@ -1,0 +1,1124 @@
+[
+  {
+    "name": "QG_original",
+    "expression": "(square(sigmoid((alpha - x))) * x)",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "unary",
+        "op": "square",
+        "child": {
+          "type": "unary",
+          "op": "sigmoid",
+          "child": {
+            "type": "binary",
+            "op": "sub",
+            "left": {
+              "type": "parameter",
+              "param_name": "alpha",
+              "init_value": 1.0
+            },
+            "right": {
+              "type": "input"
+            }
+          }
+        }
+      },
+      "right": {
+        "type": "input"
+      }
+    },
+    "accuracy": 76.67,
+    "composite_score": 0.700794,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 7,
+    "params": 1,
+    "time_sec": 113.3
+  },
+  {
+    "name": "QG_cube",
+    "expression": "(cube(sigmoid((alpha - x))) * x)",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "unary",
+        "op": "cube",
+        "child": {
+          "type": "unary",
+          "op": "sigmoid",
+          "child": {
+            "type": "binary",
+            "op": "sub",
+            "left": {
+              "type": "parameter",
+              "param_name": "alpha",
+              "init_value": 1.0
+            },
+            "right": {
+              "type": "input"
+            }
+          }
+        }
+      },
+      "right": {
+        "type": "input"
+      }
+    },
+    "accuracy": 76.15,
+    "composite_score": 0.695735,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 7,
+    "params": 1,
+    "time_sec": 127.4
+  },
+  {
+    "name": "QG_scaled",
+    "expression": "(square(sigmoid((alpha - (beta * x)))) * x)",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "unary",
+        "op": "square",
+        "child": {
+          "type": "unary",
+          "op": "sigmoid",
+          "child": {
+            "type": "binary",
+            "op": "sub",
+            "left": {
+              "type": "parameter",
+              "param_name": "alpha",
+              "init_value": 1.0
+            },
+            "right": {
+              "type": "binary",
+              "op": "mul",
+              "left": {
+                "type": "parameter",
+                "param_name": "beta",
+                "init_value": 1.0
+              },
+              "right": {
+                "type": "input"
+              }
+            }
+          }
+        }
+      },
+      "right": {
+        "type": "input"
+      }
+    },
+    "accuracy": 77.1,
+    "composite_score": 0.694853,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 9,
+    "params": 2,
+    "time_sec": 122.7
+  },
+  {
+    "name": "QG_residual",
+    "expression": "((square(sigmoid((alpha - x))) * x) + (gamma * x))",
+    "tree": {
+      "type": "binary",
+      "op": "add",
+      "left": {
+        "type": "binary",
+        "op": "mul",
+        "left": {
+          "type": "unary",
+          "op": "square",
+          "child": {
+            "type": "unary",
+            "op": "sigmoid",
+            "child": {
+              "type": "binary",
+              "op": "sub",
+              "left": {
+                "type": "parameter",
+                "param_name": "alpha",
+                "init_value": 1.0
+              },
+              "right": {
+                "type": "input"
+              }
+            }
+          }
+        },
+        "right": {
+          "type": "input"
+        }
+      },
+      "right": {
+        "type": "binary",
+        "op": "mul",
+        "left": {
+          "type": "parameter",
+          "param_name": "gamma",
+          "init_value": 1.0
+        },
+        "right": {
+          "type": "input"
+        }
+      }
+    },
+    "accuracy": 74.84,
+    "composite_score": 0.669961,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 11,
+    "params": 2,
+    "time_sec": 127.5
+  },
+  {
+    "name": "QG_linear",
+    "expression": "(sigmoid((alpha - x)) * x)",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "unary",
+        "op": "sigmoid",
+        "child": {
+          "type": "binary",
+          "op": "sub",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      },
+      "right": {
+        "type": "input"
+      }
+    },
+    "accuracy": 76.81,
+    "composite_score": 0.708594,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 6,
+    "params": 1,
+    "time_sec": 92.6
+  },
+  {
+    "name": "QG_tanh",
+    "expression": "(square(tanh((alpha - x))) * x)",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "unary",
+        "op": "square",
+        "child": {
+          "type": "unary",
+          "op": "tanh",
+          "child": {
+            "type": "binary",
+            "op": "sub",
+            "left": {
+              "type": "parameter",
+              "param_name": "alpha",
+              "init_value": 1.0
+            },
+            "right": {
+              "type": "input"
+            }
+          }
+        }
+      },
+      "right": {
+        "type": "input"
+      }
+    },
+    "accuracy": 68.44,
+    "composite_score": 0.649317,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 7,
+    "params": 1,
+    "time_sec": 91.1
+  },
+  {
+    "name": "QG_skip",
+    "expression": "((square(sigmoid((alpha - x))) * x) + x)",
+    "tree": {
+      "type": "binary",
+      "op": "add",
+      "left": {
+        "type": "binary",
+        "op": "mul",
+        "left": {
+          "type": "unary",
+          "op": "square",
+          "child": {
+            "type": "unary",
+            "op": "sigmoid",
+            "child": {
+              "type": "binary",
+              "op": "sub",
+              "left": {
+                "type": "parameter",
+                "param_name": "alpha",
+                "init_value": 1.0
+              },
+              "right": {
+                "type": "input"
+              }
+            }
+          }
+        },
+        "right": {
+          "type": "input"
+        }
+      },
+      "right": {
+        "type": "input"
+      }
+    },
+    "accuracy": 66.39,
+    "composite_score": 0.620283,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 9,
+    "params": 1,
+    "time_sec": 118.2
+  },
+  {
+    "name": "QG_flipped",
+    "expression": "(square(sigmoid((x - alpha))) * x)",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "unary",
+        "op": "square",
+        "child": {
+          "type": "unary",
+          "op": "sigmoid",
+          "child": {
+            "type": "binary",
+            "op": "sub",
+            "left": {
+              "type": "input"
+            },
+            "right": {
+              "type": "parameter",
+              "param_name": "alpha",
+              "init_value": 1.0
+            }
+          }
+        }
+      },
+      "right": {
+        "type": "input"
+      }
+    },
+    "accuracy": 75.06,
+    "composite_score": 0.690492,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 7,
+    "params": 1,
+    "time_sec": 112.5
+  },
+  {
+    "name": "P_max_sin",
+    "expression": "max(x, (alpha * sin((beta * x))))",
+    "tree": {
+      "type": "binary",
+      "op": "max",
+      "left": {
+        "type": "input"
+      },
+      "right": {
+        "type": "binary",
+        "op": "mul",
+        "left": {
+          "type": "parameter",
+          "param_name": "alpha",
+          "init_value": 1.0
+        },
+        "right": {
+          "type": "unary",
+          "op": "sin",
+          "child": {
+            "type": "binary",
+            "op": "mul",
+            "left": {
+              "type": "parameter",
+              "param_name": "beta",
+              "init_value": 1.0
+            },
+            "right": {
+              "type": "input"
+            }
+          }
+        }
+      }
+    },
+    "accuracy": 75.83,
+    "composite_score": 0.694441,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 8,
+    "params": 2,
+    "time_sec": 110.9
+  },
+  {
+    "name": "P_res_sin",
+    "expression": "(x + (alpha * sin((beta * x))))",
+    "tree": {
+      "type": "binary",
+      "op": "add",
+      "left": {
+        "type": "input"
+      },
+      "right": {
+        "type": "binary",
+        "op": "mul",
+        "left": {
+          "type": "parameter",
+          "param_name": "alpha",
+          "init_value": 1.0
+        },
+        "right": {
+          "type": "unary",
+          "op": "sin",
+          "child": {
+            "type": "binary",
+            "op": "mul",
+            "left": {
+              "type": "parameter",
+              "param_name": "beta",
+              "init_value": 1.0
+            },
+            "right": {
+              "type": "input"
+            }
+          }
+        }
+      }
+    },
+    "accuracy": 70.83,
+    "composite_score": 0.65913,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 8,
+    "params": 2,
+    "time_sec": 102.4
+  },
+  {
+    "name": "P_xcos",
+    "expression": "(x * cos((alpha * x)))",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "input"
+      },
+      "right": {
+        "type": "unary",
+        "op": "cos",
+        "child": {
+          "type": "binary",
+          "op": "mul",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      }
+    },
+    "accuracy": 65.85,
+    "composite_score": 0.638295,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 6,
+    "params": 1,
+    "time_sec": 73.3
+  },
+  {
+    "name": "P_relu_sin",
+    "expression": "(relu(x) + (alpha * sin((beta * x))))",
+    "tree": {
+      "type": "binary",
+      "op": "add",
+      "left": {
+        "type": "unary",
+        "op": "relu",
+        "child": {
+          "type": "input"
+        }
+      },
+      "right": {
+        "type": "binary",
+        "op": "mul",
+        "left": {
+          "type": "parameter",
+          "param_name": "alpha",
+          "init_value": 1.0
+        },
+        "right": {
+          "type": "unary",
+          "op": "sin",
+          "child": {
+            "type": "binary",
+            "op": "mul",
+            "left": {
+              "type": "parameter",
+              "param_name": "beta",
+              "init_value": 1.0
+            },
+            "right": {
+              "type": "input"
+            }
+          }
+        }
+      }
+    },
+    "accuracy": 72.92,
+    "composite_score": 0.662178,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 9,
+    "params": 2,
+    "time_sec": 106.5
+  },
+  {
+    "name": "P_max_sinx",
+    "expression": "max(x, sin(x))",
+    "tree": {
+      "type": "binary",
+      "op": "max",
+      "left": {
+        "type": "input"
+      },
+      "right": {
+        "type": "unary",
+        "op": "sin",
+        "child": {
+          "type": "input"
+        }
+      }
+    },
+    "accuracy": 73.92,
+    "composite_score": 0.714059,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 4,
+    "params": 0,
+    "time_sec": 79.7
+  },
+  {
+    "name": "P_res_cos",
+    "expression": "(x + (alpha * cos((beta * x))))",
+    "tree": {
+      "type": "binary",
+      "op": "add",
+      "left": {
+        "type": "input"
+      },
+      "right": {
+        "type": "binary",
+        "op": "mul",
+        "left": {
+          "type": "parameter",
+          "param_name": "alpha",
+          "init_value": 1.0
+        },
+        "right": {
+          "type": "unary",
+          "op": "cos",
+          "child": {
+            "type": "binary",
+            "op": "mul",
+            "left": {
+              "type": "parameter",
+              "param_name": "beta",
+              "init_value": 1.0
+            },
+            "right": {
+              "type": "input"
+            }
+          }
+        }
+      }
+    },
+    "accuracy": 68.09,
+    "composite_score": 0.640871,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 8,
+    "params": 2,
+    "time_sec": 75.8
+  },
+  {
+    "name": "N_param_gelu",
+    "expression": "(x * erf_safe((alpha * x)))",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "input"
+      },
+      "right": {
+        "type": "unary",
+        "op": "erf_safe",
+        "child": {
+          "type": "binary",
+          "op": "mul",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      }
+    },
+    "accuracy": 71.22,
+    "composite_score": 0.674143,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 6,
+    "params": 1,
+    "time_sec": 78.1
+  },
+  {
+    "name": "N_gauss_gate",
+    "expression": "(x * gaussian((alpha * x)))",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "input"
+      },
+      "right": {
+        "type": "unary",
+        "op": "gaussian",
+        "child": {
+          "type": "binary",
+          "op": "mul",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      }
+    },
+    "accuracy": 65.49,
+    "composite_score": 0.628735,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 6,
+    "params": 1,
+    "time_sec": 109.1
+  },
+  {
+    "name": "N_max_arctan",
+    "expression": "max(x, arctan((alpha * x)))",
+    "tree": {
+      "type": "binary",
+      "op": "max",
+      "left": {
+        "type": "input"
+      },
+      "right": {
+        "type": "unary",
+        "op": "arctan",
+        "child": {
+          "type": "binary",
+          "op": "mul",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      }
+    },
+    "accuracy": 75.51,
+    "composite_score": 0.704863,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 6,
+    "params": 1,
+    "time_sec": 88.9
+  },
+  {
+    "name": "N_shift_softplus",
+    "expression": "(softplus(x) * sigmoid((alpha - x)))",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "unary",
+        "op": "softplus",
+        "child": {
+          "type": "input"
+        }
+      },
+      "right": {
+        "type": "unary",
+        "op": "sigmoid",
+        "child": {
+          "type": "binary",
+          "op": "sub",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      }
+    },
+    "accuracy": 49.3,
+    "composite_score": 0.507447,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 7,
+    "params": 1,
+    "time_sec": 119.7
+  },
+  {
+    "name": "N_sinc_mod",
+    "expression": "(x * sinc_safe((alpha * x)))",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "input"
+      },
+      "right": {
+        "type": "unary",
+        "op": "sinc_safe",
+        "child": {
+          "type": "binary",
+          "op": "mul",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      }
+    },
+    "accuracy": 73.24,
+    "composite_score": 0.67995,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 6,
+    "params": 1,
+    "time_sec": 119.3
+  },
+  {
+    "name": "N_softsign_gate",
+    "expression": "(x * softsign((alpha * x)))",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "input"
+      },
+      "right": {
+        "type": "unary",
+        "op": "softsign",
+        "child": {
+          "type": "binary",
+          "op": "mul",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      }
+    },
+    "accuracy": 68.91,
+    "composite_score": 0.650272,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 6,
+    "params": 1,
+    "time_sec": 116.2
+  },
+  {
+    "name": "N_softplus_erf",
+    "expression": "(softplus(x) * erf_safe((alpha * x)))",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "unary",
+        "op": "softplus",
+        "child": {
+          "type": "input"
+        }
+      },
+      "right": {
+        "type": "unary",
+        "op": "erf_safe",
+        "child": {
+          "type": "binary",
+          "op": "mul",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      }
+    },
+    "accuracy": 76.96,
+    "composite_score": 0.703995,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 7,
+    "params": 1,
+    "time_sec": 126.4
+  },
+  {
+    "name": "N_gauss_shift",
+    "expression": "(x * gaussian((alpha - x)))",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "input"
+      },
+      "right": {
+        "type": "unary",
+        "op": "gaussian",
+        "child": {
+          "type": "binary",
+          "op": "sub",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      }
+    },
+    "accuracy": 61.54,
+    "composite_score": 0.601789,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 6,
+    "params": 1,
+    "time_sec": 110.0
+  },
+  {
+    "name": "B_param_gcu",
+    "expression": "(x * gcu((alpha * x)))",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "input"
+      },
+      "right": {
+        "type": "unary",
+        "op": "gcu",
+        "child": {
+          "type": "binary",
+          "op": "mul",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      }
+    },
+    "accuracy": 0.0,
+    "composite_score": -1.0,
+    "crashed": true,
+    "crash_reason": "too_slow: 11.5% after 3 epochs",
+    "nodes": 6,
+    "params": 1,
+    "time_sec": 59.9
+  },
+  {
+    "name": "B_hermite_gate",
+    "expression": "(hermite((alpha * x)) * x)",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "unary",
+        "op": "hermite",
+        "child": {
+          "type": "binary",
+          "op": "mul",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      },
+      "right": {
+        "type": "input"
+      }
+    },
+    "accuracy": 0.0,
+    "composite_score": -1.0,
+    "crashed": true,
+    "crash_reason": "too_slow: 9.8% after 3 epochs",
+    "nodes": 6,
+    "params": 1,
+    "time_sec": 65.9
+  },
+  {
+    "name": "B_max_gcu",
+    "expression": "max(x, gcu(x))",
+    "tree": {
+      "type": "binary",
+      "op": "max",
+      "left": {
+        "type": "input"
+      },
+      "right": {
+        "type": "unary",
+        "op": "gcu",
+        "child": {
+          "type": "input"
+        }
+      }
+    },
+    "accuracy": 66.19,
+    "composite_score": 0.649775,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 4,
+    "params": 0,
+    "time_sec": 107.7
+  },
+  {
+    "name": "B_ncu_gated",
+    "expression": "(ncu(x) * sigmoid((alpha * x)))",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "unary",
+        "op": "ncu",
+        "child": {
+          "type": "input"
+        }
+      },
+      "right": {
+        "type": "unary",
+        "op": "sigmoid",
+        "child": {
+          "type": "binary",
+          "op": "mul",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      }
+    },
+    "accuracy": 65.08,
+    "composite_score": 0.614535,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 7,
+    "params": 1,
+    "time_sec": 137.8
+  },
+  {
+    "name": "B_logcosh_shift",
+    "expression": "(logcosh(x) * sigmoid((alpha - x)))",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "unary",
+        "op": "logcosh",
+        "child": {
+          "type": "input"
+        }
+      },
+      "right": {
+        "type": "unary",
+        "op": "sigmoid",
+        "child": {
+          "type": "binary",
+          "op": "sub",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      }
+    },
+    "accuracy": 72.4,
+    "composite_score": 0.668474,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 7,
+    "params": 1,
+    "time_sec": 121.3
+  },
+  {
+    "name": "B_mexhat_gate",
+    "expression": "(mexican_hat((alpha * x)) * x)",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "unary",
+        "op": "mexican_hat",
+        "child": {
+          "type": "binary",
+          "op": "mul",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      },
+      "right": {
+        "type": "input"
+      }
+    },
+    "accuracy": 52.47,
+    "composite_score": 0.529031,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 6,
+    "params": 1,
+    "time_sec": 141.3
+  },
+  {
+    "name": "B_gcu_hermite",
+    "expression": "(gcu(x) + (alpha * hermite(x)))",
+    "tree": {
+      "type": "binary",
+      "op": "add",
+      "left": {
+        "type": "unary",
+        "op": "gcu",
+        "child": {
+          "type": "input"
+        }
+      },
+      "right": {
+        "type": "binary",
+        "op": "mul",
+        "left": {
+          "type": "parameter",
+          "param_name": "alpha",
+          "init_value": 1.0
+        },
+        "right": {
+          "type": "unary",
+          "op": "hermite",
+          "child": {
+            "type": "input"
+          }
+        }
+      }
+    },
+    "accuracy": 54.79,
+    "composite_score": 0.544061,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 7,
+    "params": 1,
+    "time_sec": 134.5
+  },
+  {
+    "name": "B_bell_gate",
+    "expression": "(sig_deriv((alpha * x)) * x)",
+    "tree": {
+      "type": "binary",
+      "op": "mul",
+      "left": {
+        "type": "unary",
+        "op": "sig_deriv",
+        "child": {
+          "type": "binary",
+          "op": "mul",
+          "left": {
+            "type": "parameter",
+            "param_name": "alpha",
+            "init_value": 1.0
+          },
+          "right": {
+            "type": "input"
+          }
+        }
+      },
+      "right": {
+        "type": "input"
+      }
+    },
+    "accuracy": 74.07,
+    "composite_score": 0.686928,
+    "crashed": false,
+    "crash_reason": "",
+    "nodes": 6,
+    "params": 1,
+    "time_sec": 109.5
+  }
+]
